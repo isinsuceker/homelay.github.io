@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homelay Support — Smart Home Inventory</title>
+    <style>
+        :root {
+            --linen: #F5F2ED;
+            --parchment: #FDFAF6;
+            --charcoal: #26231E;
+            --brass: #9E8568;
+            --brass-light: #F0EBE3;
+            --subtle-text: rgba(38, 35, 30, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--linen);
+            color: var(--charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: "Georgia", serif;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* --- Header --- */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--brass), #A08060);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(158, 133, 104, 0.2);
+        }
+
+        .app-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .app-name {
+            font-size: 12px;
+            letter-spacing: 6px;
+            color: var(--brass);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .app-headline {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .app-description {
+            font-size: 17px;
+            color: var(--subtle-text);
+            font-weight: 300;
+        }
+
+        /* --- FAQ --- */
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 32px;
+            text-align: center;
+            border-bottom: 1px solid rgba(38, 35, 30, 0.05);
+            padding-bottom: 16px;
+        }
+
+        .faq-item {
+            background-color: var(--parchment);
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(38, 35, 30, 0.03);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .faq-question::before {
+            content: "Q.";
+            color: var(--brass);
+            margin-right: 12px;
+            font-family: serif;
+            font-style: italic;
+        }
+
+        .faq-answer {
+            font-size: 15px;
+            color: var(--subtle-text);
+            padding-left: 30px;
+        }
+
+        /* --- Contact --- */
+        .contact-section {
+            text-align: center;
+            margin: 60px 0;
+            padding: 40px;
+            background-color: var(--brass-light);
+            border-radius: 24px;
+        }
+
+        .contact-title {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .contact-text {
+            font-size: 15px;
+            color: var(--subtle-text);
+            margin-bottom: 24px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: var(--brass);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(158, 133, 104, 0.25);
+        }
+
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(158, 133, 104, 0.35);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(38, 35, 30, 0.05);
+            margin-top: 40px;
+        }
+
+        .footer-links {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--brass);
+            text-decoration: none;
+            font-size: 13px;
+            margin: 0 12px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: var(--subtle-text);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .app-headline {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                </svg>
+            </div>
+            <div class="app-name">Homelay</div>
+            <h1 class="app-headline">How can we help?</h1>
+            <p class="app-description">Your guide to the "Quiet Luxury" home inventory experience.</p>
+        </header>
+
+        <section id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">How do I add items to my inventory?</h3>
+                <p class="faq-answer">Tap the "+" icon on the Dashboard or within any Room view. You can add a name, photo, description, and status. Homelay automatically organizes your items into layers of completeness.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Is my data synced via iCloud?</h3>
+                <p class="faq-answer">Yes, Homelay uses iCloud to keep your inventory synced across all your iOS and iPadOS devices. Ensure you are signed into the same Apple ID and have iCloud Drive enabled for Homelay.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">How do I manage my premium subscription?</h3>
+                <p class="faq-answer">You can manage or cancel your subscription at any time via the App Store. Go to Settings on your iPhone &rarr; [Your Name] &rarr; Subscriptions &rarr; Homelay.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">How can I export my wishlist?</h3>
+                <p class="faq-answer">Go to the Wishlist section and tap the "Share" icon in the top right. You can export your list as a beautiful PDF or text list to share with family or interior designers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">How do I delete my data and account?</h3>
+                <p class="faq-answer">Homelay does not require an account, so your data stays on your device and iCloud. To delete all data, go to the app's Settings &rarr; Reset Data. To stop syncing, disable Homelay in your iCloud settings.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="contact-title">Still have questions?</h2>
+            <p class="contact-text">We're here to help you curate your perfect space. Email our support team and we'll get back to you within 24 hours.</p>
+            <a href="mailto:support@yourdomain.com?subject=Homelay%20Support%20Request" class="contact-button">Email Support</a>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="https://isinsuceker.github.io/homelayapp/">Home</a>
+            </div>
+            <p class="copyright">&copy; 2026 Homelay. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
