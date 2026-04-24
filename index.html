@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homelay — Smart Home Inventory for the Modern Space</title>
+    <style>
+        :root {
+            --linen: #F5F2ED;
+            --parchment: #FDFAF6;
+            --charcoal: #26231E;
+            --brass: #9E8568;
+            --brass-light: #F0EBE3;
+            --subtle-text: rgba(38, 35, 30, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--linen);
+            color: var(--charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: "Georgia", serif;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--brass), #A08060);
+            border-radius: 24px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 32px rgba(158, 133, 104, 0.25);
+        }
+
+        .app-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+
+        .app-name {
+            font-size: 14px;
+            letter-spacing: 8px;
+            color: var(--brass);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .app-headline {
+            font-size: 48px;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .app-description {
+            font-size: 20px;
+            color: var(--subtle-text);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .button-primary {
+            background-color: var(--charcoal);
+            color: white;
+            box-shadow: 0 8px 20px rgba(38, 35, 30, 0.15);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(38, 35, 30, 0.25);
+        }
+
+        .button-secondary {
+            background-color: transparent;
+            color: var(--brass);
+            border: 1px solid var(--brass);
+        }
+
+        .button-secondary:hover {
+            background-color: var(--brass-light);
+        }
+
+        /* --- Features --- */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background-color: var(--parchment);
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(38, 35, 30, 0.03);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .feature-text {
+            font-size: 15px;
+            color: var(--subtle-text);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding-top: 60px;
+            border-top: 1px solid rgba(38, 35, 30, 0.05);
+        }
+
+        .footer-links {
+            margin-bottom: 24px;
+        }
+
+        .footer-links a {
+            color: var(--brass);
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 16px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: var(--subtle-text);
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 40px 0;
+            }
+            .app-headline {
+                font-size: 34px;
+            }
+            .app-description {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                </svg>
+            </div>
+            <div class="app-name">Homelay</div>
+            <h1 class="app-headline">Quiet Luxury for Your Home Inventory</h1>
+            <p class="app-description">Curate your space with a calm, editorial-grade inventory experience. Organize, elevate, and complete your home layers.</p>
+            
+            <div class="cta-group">
+                <a href="#" class="button button-primary">Download on the App Store</a>
+                <a href="support.html" class="button button-secondary">Get Support</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <span class="feature-icon">✨</span>
+                <h3 class="feature-title">Layered Curation</h3>
+                <p class="feature-text">Organize your home into logical layers, from foundational essentials to aesthetic finishing touches.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">☁️</span>
+                <h3 class="feature-title">iCloud Sync</h3>
+                <p class="feature-text">Your inventory stays with you. Securely synced across all your iOS and iPadOS devices automatically.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🏺</span>
+                <h3 class="feature-title">Quiet Aesthetics</h3>
+                <p class="feature-text">Designed with a warm, minimalist palette that feels like a luxury interior design magazine.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="support.html">Support</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <p class="copyright">&copy; 2026 Homelay. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
